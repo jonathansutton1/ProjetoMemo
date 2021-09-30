@@ -1,0 +1,13 @@
+{% extends "notes/base.html" %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+  <label for="titulo">Memo</label>
+  <input id="titulo" type="text" name="titulo" />
+  <button type="submit">Enviar</button>
+</form>
+<ul>
+    <li>{{notes.title}}</li>
+  </ul>
+{% endblock %
